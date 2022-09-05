@@ -1,0 +1,45 @@
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-family: Montserrat, RobotoSlab, sans-serif;
+  gap: 3rem;
+  border-bottom: solid 1px grey;
+}
+
+.nav-bar-wrapper {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 3rem;
+  border-bottom: solid 1px lightgray;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+h1 {
+  color: black;
+  font-size: 2rem;
+}
+
+.links-nav {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.links-nav>li>a {
+  color: inherit;
+  text-decoration: none;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.2rem;
+}
