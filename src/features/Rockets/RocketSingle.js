@@ -1,21 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { rocketReserve, rocketUndoReserve } from './rocketsSlice';
+import { rocketReserve } from './rocketsSlice';
 
 const RocketSingle = (props) => {
   const dispatch = useDispatch();
+  const { rocket } = props;
+
   // const {
-  //   image, name, description, reserved,
+  //   id,
+  //   image,
+  //   name,
+  //   description,
+  //   reserved,
   // } = props;
-  const { rocket } = props
   const reserveClickHandler = () => {
-    dispatch(rocketReserve({ rocket }));
-    // if (reserved === false) {
-    //   dispatch(rocketReserve(rocket));
-    // } else {
-    //   dispatch(rocketUndoReserve());
-    // }
+    dispatch(rocketReserve(rocket.rocket_id));
   };
 
   return (
@@ -25,24 +25,23 @@ const RocketSingle = (props) => {
         <h2>{rocket.rocket_name}</h2>
         <p>{rocket.description}</p>
         <button type="button" aria-label="Increment value" onClick={reserveClickHandler}>
-          Reserve Rocket
+          {rocket.reserved ? 'yes' : 'no'}
         </button>
       </div>
     </div>
   );
 };
 
-// RocketSingle.defaultProps = {
-//   image: '',
-//   name: '',
-//   description: '',
-//   reserved: false,
-// };
+RocketSingle.propTypes = {
+  rocket: PropTypes.shape(
+    {
+      rocket_id: PropTypes.string,
+      rocket_name: PropTypes.string,
+      description: PropTypes.string,
+      reserved: PropTypes.bool,
+      flickr_images: PropTypes.arrayOf(PropTypes.string),
+    },
+  ).isRequired,
+};
 
-// RocketSingle.propTypes = {
-//   image: PropTypes.string,
-//   name: PropTypes.string,
-//   description: PropTypes.string,
-//   reserved: PropTypes.bool,
-// };
 export default RocketSingle;

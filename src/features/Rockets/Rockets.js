@@ -19,10 +19,10 @@ const Rockets = () => {
         <RocketSingle
           key={rocket.id}
           rocket={rocket}
+          // id={rocket.rocket_id}
           // image={rocket.flickr_images[0]}
           // name={rocket.rocket_name}
           // description={rocket.description}
-          // reserved={rocket.reserved}
         />
       ))}
     </ul>
