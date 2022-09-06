@@ -16,9 +16,16 @@ const Rockets = () => {
   return (
     <ul className="rockets-list">
       {rockets.map((rocket) => (
-        <RocketSingle key={rocket.id} rocketData={rocket} />
+        <RocketSingle
+          key={rocket.id}
+          rocket={rocket}
+          // image={rocket.flickr_images[0]}
+          // name={rocket.rocket_name}
+          // description={rocket.description}
+          // reserved={rocket.reserved}
+        />
       ))}
     </ul>
-  )
-}
+  );
+};
 export default Rockets;

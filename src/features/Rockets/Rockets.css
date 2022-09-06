@@ -7,8 +7,8 @@
   padding: 2rem 0;
 }
 
-.rockets-list>* {
-  width: 90%
+.rockets-list > * {
+  width: 90%;
 }
 
 .rocket-item {
@@ -19,34 +19,36 @@
   gap: 2rem;
 }
 
-.rocket-item>* {
+.rocket-item > * {
   width: 90%;
 }
 
-.rocket-info{
+.rocket-info {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.rocket-info>button{
+.rocket-info > button {
   padding: 0.6rem 1.2rem;
-  background-color:dodgerblue;
+  background-color: dodgerblue;
   color: white;
   border: none;
   border-radius: 4px;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .rocket-item {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
   }
-  .rocket-item>img {
+
+  .rocket-item > img {
     width: 30%;
   }
-  .rocket-info>button{
+
+  .rocket-info > button {
     width: max-content;
   }
 }
