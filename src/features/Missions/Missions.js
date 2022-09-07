@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { joinMission, leaveMission, getMissions } from './missionSlice';
+import { joinMission, getMissions } from './missionSlice';
 import  './Missions.css';
 
 const Missions = () => {
@@ -9,9 +9,6 @@ const Missions = () => {
   console.log(missions);
   const handleJoin = (id) => {
     dispatch(joinMission(id));
-  };
-    const handleLeave = (id) => {
-/*     dispatch(leaveMission(id)); */
   };
 
   if (missions.length === 0) {
@@ -33,8 +30,18 @@ const Missions = () => {
   <tr>
   <td className="mission-title">{ e.mission_name }</td>
   <td className="mission-info">{ e.description }</td>
-  <td className="mission-status">NOT A MEMBER</td>
-  <td classname="join-mission">Join Mission</td>
+  <td className="mission-status">
+      <span className="status">{ e.joined ? 'ACTIVE MEMBER': 'NOT A MEMBER'}</span>
+  </td>
+
+  <td classname="join-mission">
+      <button type="button"
+      className="member"
+       onClick={() => handleJoin(e.mission_id)}
+       >
+       { e.joined ? 'LEAVE MISSION': 'JOIN MISSION'}
+       </button>
+  </td>
   </tr>
 ))}
   </tbody>
