@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-// import counterReducer from '../features/counter/counterSlice';
+import logger from 'redux-logger';
+import missionReducer from '../features/Missions/missionSlice';
+
 
 export const store = configureStore({
   reducer: {
-    // change the line below for our reducers
-    // counter: counterReducer,
+    missions: missionReducer,
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
