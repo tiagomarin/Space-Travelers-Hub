@@ -25,9 +25,7 @@ const rocketsSlice = createSlice({
 
   extraReducers: (builder) => {
     builder
-      .addCase(getRockets.pending, () => {
-        console.log('loading');
-      })
+      // .addCase(getRockets.pending, (state, action) => 'loading')
       .addCase(getRockets.fulfilled, (state, action) => action.payload);
   },
 });

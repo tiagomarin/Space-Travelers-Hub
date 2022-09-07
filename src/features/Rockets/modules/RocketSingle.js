@@ -1,31 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { rocketReserve } from './rocketsSlice';
+import { rocketReserve } from '../rocketsSlice';
+import ReservedBadge from './ReservedBadge';
 
 const RocketSingle = (props) => {
   const dispatch = useDispatch();
   const { rocket } = props;
-
-  // const {
-  //   id,
-  //   image,
-  //   name,
-  //   description,
-  //   reserved,
-  // } = props;
-  const reserveClickHandler = () => {
-    dispatch(rocketReserve(rocket.rocket_id));
-  };
 
   return (
     <div className="rocket-item">
       <img src={rocket.flickr_images[0]} alt={rocket.rocket_name} />
       <div className="rocket-info">
         <h2>{rocket.rocket_name}</h2>
+        {rocket.reserved ? <ReservedBadge /> : <span className="badge-place" />}
         <p>{rocket.description}</p>
-        <button type="button" aria-label="Increment value" onClick={reserveClickHandler}>
-          {rocket.reserved ? 'yes' : 'no'}
+        <button
+          className={rocket.reserved ? 'cancel-reservation' : 'reserve'}
+          type="button"
+          aria-label="Increment value"
+          onClick={() => dispatch(rocketReserve(rocket.rocket_id))}
+        >
+          {rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
         </button>
       </div>
     </div>

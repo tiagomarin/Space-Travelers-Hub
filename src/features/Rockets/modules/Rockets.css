@@ -8,7 +8,7 @@
 }
 
 .rockets-list > * {
-  width: 90%;
+  width: 100%;
 }
 
 .rocket-item {
@@ -29,15 +29,51 @@
   gap: 1rem;
 }
 
-.rocket-info > button {
-  padding: 0.6rem 1.2rem;
-  background-color: dodgerblue;
+.rocket-info > h2 {
+  display: flex;
+  height: 2rem;
+}
+
+.badge-place {
+  height: 1.9rem;
+}
+
+.reserved-badge {
+  background-color: teal;
+  font-size: 1rem;
   color: white;
   border: none;
   border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+  width: max-content;
+}
+
+.rocket-info > p {
+  font-size: 1.4rem;
+}
+
+.rocket-info > button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+}
+
+.reserve {
+  background-color: dodgerblue;
+  color: white;
+  border: 1px solid dodgerblue;
+}
+
+.cancel-reservation {
+  background-color: white;
+  border: 1px solid rgb(140, 140, 140);
+  color: rgb(140, 140, 140);
 }
 
 @media screen and (min-width: 768px) {
+  .rockets-list > * {
+    width: 90%;
+  }
+
   .rocket-item {
     display: flex;
     flex-direction: row;

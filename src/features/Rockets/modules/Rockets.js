@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import RocketSingle from './RocketSingle';
-import { getRockets } from './rocketsSlice';
+import { getRockets } from '../rocketsSlice';
 import './Rockets.css';
 
 const Rockets = () => {
@@ -19,10 +19,6 @@ const Rockets = () => {
         <RocketSingle
           key={rocket.id}
           rocket={rocket}
-          // id={rocket.rocket_id}
-          // image={rocket.flickr_images[0]}
-          // name={rocket.rocket_name}
-          // description={rocket.description}
         />
       ))}
     </ul>
