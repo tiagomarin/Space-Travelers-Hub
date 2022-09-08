@@ -7,6 +7,7 @@
   font-family: Montserrat, RobotoSlab, sans-serif;
   gap: 3rem;
   border-bottom: solid 1px grey;
+  margin-bottom: 4rem;
 }
 
 .nav-bar-wrapper {
@@ -36,17 +37,22 @@ h1 {
   width: 8rem;
 }
 
-.links-nav {
+.nav-links-wrap {
   display: flex;
   list-style: none;
   gap: 1rem;
+  color: blue;
 }
 
-.links-nav > li > a {
+.nav-links {
   color: inherit;
   text-decoration: none;
   font-family: 'Fredoka One', cursive;
   font-size: 1.2rem;
+}
+
+.nav-links.active {
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 768px) {
@@ -59,11 +65,11 @@ h1 {
     width: max-content;
   }
 
-  .links-nav {
+  .nav-links-wrap {
     gap: 2.2rem;
   }
 
-  .links-nav > li > a {
+  .nav-links {
     font-size: 1.6rem;
   }
 }

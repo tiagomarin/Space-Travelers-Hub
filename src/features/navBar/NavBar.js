@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from './logo.png';
 import './NavBar.css';
 
@@ -10,13 +10,27 @@ const NavBar = () => (
         <img src={logo} alt="logo" />
         <h1>Space Traveler&apos;s Hub</h1>
       </div>
-      <ul className="links-nav">
-        <li><Link to="/"> Rockets </Link></li>
-        <li><Link to="/Missions"> Missions </Link></li>
-        <li><Link to="/MyProfile"> My Profile </Link></li>
+      <ul className="nav-links-wrap">
+        <li>
+          <NavLink className={({ isActive }) => (isActive ? 'nav-links active' : 'nav-links')} to="/">
+            Rockets
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className={({ isActive }) => (isActive ? 'nav-links active' : 'nav-links')} to="/Missions">
+            Missions
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className={({ isActive }) => (isActive ? 'nav-links active' : 'nav-links')} to="/MyProfile">
+            My Profile
+          </NavLink>
+        </li>
       </ul>
     </div>
   </nav>
 );
+
+// className = {({ isActive }) => (isActive ? 'rockets-link active-link' : 'none')}
 
 export default NavBar;
