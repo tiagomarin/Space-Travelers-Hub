@@ -1,4 +1,14 @@
-.my-rockets-wrapper {
+.my-profile-wrap {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+}
+
+.my-profile-wrap > * {
+  width: 50%;
+}
+
+.my-profile-wrap > div {
   display: flex;
   flex-direction: column;
 }
