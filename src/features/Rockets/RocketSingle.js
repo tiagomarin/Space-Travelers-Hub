@@ -1,18 +1,13 @@
-import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-// import { reserve } from './rocketsSlice';
+import React from 'react';
 
-const RocketSingle = () => {
-  const dispatch = useDispatch();
-  return (
-    <div>
-      <button
-        aria-label="Increment value"
-        // onClick={() => dispatch(reserve())}
-      >
-        Reserve a Rocket
-      </button>
-    </div>
-  )
-}
+const RocketSingle = () => (
+  <div>
+    <button
+      type="button"
+      aria-label="Increment value"
+    >
+      Reserve a Rocket
+    </button>
+  </div>
+);
 export default RocketSingle;

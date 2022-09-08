@@ -7,7 +7,7 @@ const NavBar = () => (
     <div className="nav-bar-wrapper">
       <div className="logo-wrapper">
         <span>LOGO</span>
-        <h1>Space Traveler's Hub</h1>
+        <h1>Space Traveler&apos;s Hub</h1>
       </div>
       <ul className="links-nav">
         <li><Link to="/"> Rockets </Link></li>

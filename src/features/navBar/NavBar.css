@@ -37,7 +37,7 @@ h1 {
   gap: 2rem;
 }
 
-.links-nav>li>a {
+.links-nav > li > a {
   color: inherit;
   text-decoration: none;
   font-family: 'Fredoka One', cursive;
