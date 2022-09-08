@@ -1,0 +1,9 @@
+.wrapper {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+}
+
+.wrapper>* {
+  width: 50%;
+}

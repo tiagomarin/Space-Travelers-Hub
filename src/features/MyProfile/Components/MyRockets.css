@@ -1,0 +1,16 @@
+.my-rockets-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-profile-rockets-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.my-profile-rockets-list > li {
+  list-style-type: none;
+  padding: 0 !important;
+  margin: 0 !important;
+}

@@ -22,5 +22,5 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.188);
+  background-color: white;
 }
