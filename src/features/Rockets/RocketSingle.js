@@ -1,14 +1,13 @@
 import React from 'react';
 
-const RocketSingle = () => {
-  return (
-    <div>
-      <button
-        aria-label="Increment value"
-      >
-        Reserve a Rocket
-      </button>
-    </div>
-  )
-}
+const RocketSingle = () => (
+  <div>
+    <button
+      type="button"
+      aria-label="Increment value"
+    >
+      Reserve a Rocket
+    </button>
+  </div>
+);
 export default RocketSingle;
