@@ -1,11 +1,10 @@
 .my-profile-wrap {
   display: flex;
+  flex-direction: column;
   width: 90%;
   justify-content: center;
-}
-
-.my-profile-wrap > * {
-  width: 50%;
+  gap: 5rem;
+  padding: 0;
 }
 
 .my-profile-wrap > div {
@@ -13,14 +12,28 @@
   flex-direction: column;
 }
 
-.my-profile-rockets-list {
+.my-profile-list {
   display: flex;
   flex-direction: column;
   list-style-type: none;
+  border-bottom: 1px solid darkgrey;
+  padding-left: 0;
 }
 
-.my-profile-rockets-list > li {
+.my-profile-list-items {
   list-style-type: none;
-  padding: 0 !important;
-  margin: 0 !important;
+  border: 1px solid darkgrey;
+  padding: 2rem 2rem 4rem;
+  font-size: 1.4rem;
+  border-bottom: none;
+}
+
+@media screen and (min-width: 768px) {
+  .my-profile-wrap {
+    flex-direction: row;
+  }
+
+  .my-profile-wrap > * {
+    width: 50%;
+  }
 }

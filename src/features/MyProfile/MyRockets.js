@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const MyRockets = (props) => {
   const { rocketName } = props;
-  return <li>{rocketName}</li>;
+  return <li className="my-profile-list-items">{rocketName}</li>;
 };
 
 MyRockets.defaultProps = {

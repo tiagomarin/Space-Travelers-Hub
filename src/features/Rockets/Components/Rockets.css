@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   gap: 4rem;
-  padding: 2rem 0;
+  padding: 0;
 }
 
 .rockets-list > * {
@@ -35,7 +35,7 @@
 }
 
 .badge-place {
-  height: 1.9rem;
+  height: 2.3rem;
 }
 
 .reserved-badge {
@@ -86,5 +86,13 @@
 
   .rocket-info > button {
     width: max-content;
+  }
+
+  .rocket-info > p {
+    font-size: 1.6rem;
+  }
+
+  .reserve {
+    font-size: 1.6rem;
   }
 }

@@ -14,7 +14,7 @@ const MyProfile = () => {
     <div className="my-profile-wrap">
       <div>
         <h2>My Rockets</h2>
-        <ul className="my-profile-rockets-list">
+        <ul className="my-profile-list">
           {reservedRockets.map((item) => (
             <MyRockets
               key={item.rocket_id}
@@ -25,7 +25,7 @@ const MyProfile = () => {
       </div>
       <div>
         <h2>My Missions</h2>
-        <ul>
+        <ul className="my-profile-list">
           {joinedMissions.map((item) => (
             <MyMissions
               key={item.mission_id}

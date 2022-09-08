@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const MyMissions = (props) => {
   const { missionName } = props;
-  return <li>{missionName}</li>;
+  return <li className="my-profile-list-items">{missionName}</li>;
 };
 
 MyMissions.defaultProps = {
