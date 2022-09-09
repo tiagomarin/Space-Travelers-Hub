@@ -1,0 +1,98 @@
+.rockets-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 0;
+}
+
+.rockets-list > * {
+  width: 100%;
+}
+
+.rocket-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.rocket-item > * {
+  width: 90%;
+}
+
+.rocket-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rocket-info > h2 {
+  display: flex;
+  height: 2rem;
+}
+
+.badge-place {
+  height: 2.3rem;
+}
+
+.reserved-badge {
+  background-color: teal;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+  width: max-content;
+}
+
+.rocket-info > p {
+  font-size: 1.4rem;
+}
+
+.rocket-info > button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+}
+
+.reserve {
+  background-color: dodgerblue;
+  color: white;
+  border: 1px solid dodgerblue;
+}
+
+.cancel-reservation {
+  background-color: white;
+  border: 1px solid rgb(140, 140, 140);
+  color: rgb(140, 140, 140);
+}
+
+@media screen and (min-width: 768px) {
+  .rockets-list > * {
+    width: 90%;
+  }
+
+  .rocket-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .rocket-item > img {
+    width: 30%;
+  }
+
+  .rocket-info > button {
+    width: max-content;
+  }
+
+  .rocket-info > p {
+    font-size: 1.6rem;
+  }
+
+  .reserve {
+    font-size: 1.6rem;
+  }
+}
